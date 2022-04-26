@@ -222,4 +222,5 @@ nav a:hover {
  }
  h1 {
    color: var(--green-glow);
+   margin-bottom: 3rem;
  }
