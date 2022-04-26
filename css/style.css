@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --green-light: hsl(123deg, 47%, 74%);
+  --green-dark: hsl(123, 47%, 34%);
+  --green-glow: hsl(80, 95%, 59%);
+  --blue-light: hsl(210deg, 47%, 74%);
+  --blue-dark: hsl(210, 47%, 34%);
+  --blue-glow: hsl(210, 100%, 56%);
+  --orange-light: hsl(34deg, 93%, 77%);
+  --orange-dark: hsl(34, 93%, 37%);
+  --orange-glow: hsl(34, 100%, 56%);
+  --purple-light: hsl(267, 44%, 76%);
+  --purple-dark: hsl(256, 44%, 36%);
+  --purple-glow: hsl(266, 98%, 64%);
+  --yellow-light: hsl(54deg, 76%, 79%);
+  --yellow-dark: hsl(54, 76%, 39%);
+  --yellow-glow: hsl(54, 100%, 55%);
+  --white-light: hsl(0deg, 0%, 100%);
+  --white-dark: hsl(0, 0%, 31%);
+}
+
+body {
+  font-family: system-ui;
+  display: grid;
+  min-height: 100vh;
+  background: var(--white-dark);
+}
+
+.mainarea {
+  width: 85%;
+  margin: 0 auto;
+}
+
+nav {
+  overflow: hidden;
+  background: var(--green-dark);
+  width: 50%;
+  margin: 2rem auto;
+  text-align: center;
+  border: var(--green-light) .25em solid;
+  box-shadow: 0 0 2rem var(--green-glow);
+}
+
+nav li {
+  display: inline-block;
+  margin-left: -2em;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 2rem;
+  color: var(--green-light);
+  text-shadow: 0 0 1em var(--green-glow);
+}
+
+nav a:hover {
+  color: var(--white-light);
+}
+
+.section {
+  display: grid;
+  place-items: center;
+  margin-right: 8rem;
+  margin-top: 16rem;
+}
+
+.orbit {
+  --size: 12rem;
+  --speed: 90s;
+}
+.orbit .center_image {
+  width: var(--size);
+  position: absolute;
+  z-index: 10;
+  border: var(--green-light) 0.1em solid;
+  border-radius: 50%;
+  transform: translate(-3rem, -2rem);
+  box-shadow: 0 0 3rem var(--green-glow);
+}
+.orbit ul {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  list-style: none;
+  animation: orbit var(--speed) linear infinite;
+}
+.orbit ul:hover {
+  animation-play-state: paused;
+}
+.orbit ul:hover * {
+  animation-play-state: paused;
+}
+.orbit li {
+  --icon-bg: pink;
+  --text-bg: teal;
+  position: absolute;
+  width: 7.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  font-weight: 500;
+  color: var(--white-light);
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.orbit li > * {
+  position: absolute;
+  animation: hold_position var(--speed) linear infinite;
+}
+.orbit li > div {
+  border-radius: inherit;
+  background: var(--icon-bg);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.orbit li a {
+  background: var(--text-bg);
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  place-items: center;
+  transition: opacity 500ms;
+  opacity: 0;
+  text-decoration: none;
+  color: var(--white-light);
+}
+.orbit li a:hover {
+  opacity: 1;
+}
+.orbit li img {
+  border-radius: 50%;
+  width: 7rem;
+}
+.orbit ul {
+  display: grid;
+  place-items: center;
+}
+.orbit li:nth-child(1) {
+  --icon-bg: var(--purple-light);
+  --text-bg: var(--purple-dark);
+  transform: translate(12rem, -5rem);
+}
+.orbit li:nth-child(2) {
+  --icon-bg: var(--green-light);
+  --text-bg: var(--green-dark);
+  transform: translate(8rem, 10rem);
+}
+.orbit li:nth-child(3) {
+  --icon-bg: var(--blue-light);
+  --text-bg: var(--blue-dark);
+  transform: translate(-8rem, 10rem);
+}
+.orbit li:nth-child(4) {
+  --icon-bg: var(--orange-light);
+  --text-bg: var(--orange-dark);
+  transform: translate(-12rem, -5rem);
+}
+.orbit li:nth-child(5) {
+  --icon-bg: var(--yellow-light);
+  --text-bg: var(--yellow-dark);
+  transform: translate(0rem, -13rem);
+}
+
+.orbit li:nth-child(1):hover {
+  box-shadow: 0 0 4em var(--purple-glow);
+}
+.orbit li:nth-child(2):hover {
+  box-shadow: 0 0 4em var(--green-glow);
+}
+.orbit li:nth-child(3):hover {
+  box-shadow: 0 0 4em var(--blue-glow);
+}
+.orbit li:nth-child(4):hover {
+  box-shadow: 0 0 4em var(--orange-glow);
+}
+.orbit li:nth-child(5):hover {
+  box-shadow: 0 0 4em var(--yellow-glow);
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hold_position {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.blur {
+  z-index: -1;
+  width: 10rem;
+  height: 7rem;
+  margin-top: 10em;
+  margin-left: 6rem;
+  background: var(--green-glow);
+  transform: perspective(2em) rotateX(20deg) scale(2, .5);
+  filter: blur(1.5em);
+ }
+ .text {
+   color: var(--white-light);
+   display: grid;
+   width: 70%;
+   margin:5rem auto;
+   text-align: center;
+ }
+ h1 {
+   color: var(--green-glow);
+ }
