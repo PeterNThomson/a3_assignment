@@ -22,6 +22,7 @@
   --yellow-glow: hsl(54, 100%, 55%);
   --white-light: hsl(0deg, 0%, 100%);
   --white-dark: hsl(0, 0%, 31%);
+  --black: hsl(0, 0%, 0%);
 }
 
 body {
@@ -55,11 +56,12 @@ nav a {
   text-decoration: none;
   padding: 2rem;
   color: var(--green-light);
-  text-shadow: 0 0 1em var(--green-glow);
+  text-shadow: 0 0 1rem var(--green-glow);
 }
 
 nav a:hover {
   color: var(--white-light);
+  text-shadow: 0 0 1rem var(--black);
 }
 
 .section {
