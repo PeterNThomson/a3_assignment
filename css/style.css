@@ -226,6 +226,10 @@ nav a:hover {
   text-align: center;
 }
 
+img {
+  margin: auto;
+}
+
 h1 {
   color: var(--green-glow);
   margin-bottom: 6rem;
