@@ -235,6 +235,10 @@ h1 {
   margin-bottom: 6rem;
 }
 
+a {
+  color: var(--blue-glow);
+}
+
 @keyframes orbit {
   from {
     transform: rotate(0deg);
