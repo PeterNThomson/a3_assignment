@@ -221,9 +221,14 @@ nav a:hover {
 .text {
   color: var(--white-light);
   display: grid;
-  width: 70%;
+  width: 55%;
   margin: 5rem auto;
   text-align: center;
+}
+
+.text li {
+  text-align: left;
+  margin-left: 6rem;
 }
 
 img {

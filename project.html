@@ -52,6 +52,99 @@
         </p>
         <h2>Aims</h2>
         <h2>Plans and Progress</h2>
+        <p>
+          Given that our goal is to create a lightweight Spotify overlay this
+          project doesn't contain a massive amount of features, it displays a
+          small window at the top of the screen along with mappable hotkeys to
+          adjust volume and change songs. We are also excited about the
+          implementation of an expandable window that will contain user stat
+          tracking, letting the user see how much music they have been listening
+          to, most listened to genre or artist, songs and more, without having
+          to wait for the once-a-year Spotify wrap up. Our core design goal from
+          the start, was to create a lightweight, informative, and as
+          unobtrusive as possible overlay, allowing user to flick through there
+          Spotify library without losing focus on the task at hand, whilst
+          having the option to display detailed statistics about their music
+          listening history. <br /><br />
+          At present our project is still in the very early development stage,
+          we have developed a proof-of-concept animation to visually display the
+          direction we are heading with our overlay. Below are some screenshots
+          taken from said animation, to see full animation refer to our video
+          presentation.
+        </p>
+        <p>
+          But let's go back and talk about how we got here, and where we plan to
+          go moving forward. <br />With all members of our group being
+          avid music listeners through Spotify, along with the reported 180
+          million other Spotify subscribers, (Spotify users - subscribers in
+          2022 | Statista, 2022), not just users but paying customers worldwide,
+          we felt that our frustrations, along with many of the growing concerns
+          and frustrations around the applications clunky interface from users
+          everywhere, was something worth spending time on to see if we could
+          make an improvement. In line with our design philosophy, we sat down
+          to discuss, “what is the bare minimum number of features we need for
+          this overlay to function but remain lightweight?”. <br /><br />
+          With this is mind we landed on the following:
+        </p>
+        <ul>
+          <li>All actions must be hotkey mappable</li>
+          <li>Pause/play</li>
+          <li>Cycle through library or playlist tracks</li>
+          <li>Volume adjustment</li>
+          <li>Ability to scrub through tracks</li>
+          <li>User statistics</li>
+          <li>Minimalistic visual display of the information</li>
+        </ul>
+        <p>
+          While it was tempting to get carried away here adding more and more
+          features, we opted to stay with a smaller more achievable goal that
+          left room for expansion in the future. <br />
+          <br />
+          When it came down to deciding what software and programming was going
+          to be needed to implement our features in the way we had envisioned,
+          and given the group relatively novice level of knowledge around
+          programming languages, we anticipate this list is likely going to be
+          added to as the project moves forward. We decided to use Python as our
+          language of choice as some of the group had some proficiency in it,
+          along with a few libraries being, Tekore, pygame, tkinter and pywin32.
+          We believe this set of libraries will cover the implementation of the
+          features we are after, but again we are prepared for this to change as
+          the project evolve, and are confident we can overcome these obstacles.
+          <br />
+          <br />
+          Given our limited knowledge around the backend side of things we opted
+          for focusing on the frontend design before diving into the coding
+          portion of the overlay. Doing so has allowed us to create a first
+          visual mock-up of the design giving a solid foundation to build upon
+          visually and a clear target to pursue. Which brings us back to the
+          present stage of the project, so what's next? <br />
+          <br />
+          One section has been alluded to, but not shown, user statistics. This
+          feature was a late addition to the project, but one that we felt had a
+          place within our application, while not a tool that is for everyone,
+          having the ability to track listening hours or what genre/artist those
+          hours were spent on, was something that got our team excited. Bunch of
+          statistic nerds. This will likely be our next course of action, to
+          design a simplistic expandable window for displaying user statistics
+          that still holds true to our original design goals, after this we move
+          into the coding phase. <br />
+          <br />
+          Coding will undoubtedly be the lengthiest phase of the project, due to
+          inexperience there will be quite the learning curve as we move through
+          integrating the various features into an application. But as stated
+          earlier we are confident that with some experimentation and practise,
+          we can overcome these hurdles to create an eye-pleasing, more
+          productive, streamlined solution to alt-tabbing away from work to
+          handle music. <br />
+          <br />
+          Some of the features that arose throughout the planning process were a
+          leader board system working alongside user statistics to compete with
+          friends, variant style options for the overlay itself beyond the
+          default options like border style options or complete themes. While we
+          are excited to look further into these features, this would be
+          reserved for future versions of the application as these types of
+          features generally are used by fairly niche portion of the population.
+        </p>
         <h2>Roles</h2>
         <p>
           We have not defined specific roles in our group, being all new to the
@@ -68,11 +161,51 @@
         </p>
         <h2>Scope and Limits</h2>
         <h2>Tools and Technology</h2>
-        <p> The software and tools that are required for the project is the tekore library, this would allow us to access the features that the spotify API has access to, meaning that the music library that spotify uses will give us access  and this allows for asynchronous programming which is a Boolean parameter that could be used to check if the data from the spotify resources that is going to be used, this will in turn make it so that we assign a value  of what the overlay will do and appear on the GUI such as when a song finishes to play the next song in the cue, to change to the play button to show that the song is playing. This will give authorisation for applications  and  users so that we can use the platform that spotify uses to implement the overlay application to spotify, this will allow users to use the application and help us with testing and developing  the application. This has a senders function that allows a failed request meaning that after the user interacts with the overlay application in order to use a feature of the application sends that value to the spotify API to do that feature although this could fail cause the application is sending the value from a different website, the user that requested to the overlay application and resends that request to the application or to the spotify API until the request works so that it will be used to help us with the backend of the requests that don’t work to better manage them 
+        <p>
+          The software and tools that are required for the project is the tekore
+          library, this would allow us to access the features that the spotify
+          API has access to, meaning that the music library that spotify uses
+          will give us access and this allows for asynchronous programming which
+          is a Boolean parameter that could be used to check if the data from
+          the spotify resources that is going to be used, this will in turn make
+          it so that we assign a value of what the overlay will do and appear on
+          the GUI such as when a song finishes to play the next song in the cue,
+          to change to the play button to show that the song is playing. This
+          will give authorisation for applications and users so that we can use
+          the platform that spotify uses to implement the overlay application to
+          spotify, this will allow users to use the application and help us with
+          testing and developing the application. This has a senders function
+          that allows a failed request meaning that after the user interacts
+          with the overlay application in order to use a feature of the
+          application sends that value to the spotify API to do that feature
+          although this could fail cause the application is sending the value
+          from a different website, the user that requested to the overlay
+          application and resends that request to the application or to the
+          spotify API until the request works so that it will be used to help us
+          with the backend of the requests that don't work to better manage them
         </p>
         <h2>Testing</h2>
-         <p>We will be testing how the features of the overlay application will perform including how the application will appear and its functions, the first test that we are going to do will be seeing if the application will access the resources that the spotify API uses and this will allow us to change the environment that the file is in and to extract it, to show that we will be using the asynchronous programming so that we can see if the Boolean function will register the file that is going to be used or not and so that the rest of the features of the overlay application will use this function and the input of this is the songs that are used will be  accessed from within the spotify API. The next test is that to check for the value of the time that the song will take and this will be using the Boolean function to realize the numerical value of the time when the song finishes then it will play the next song that is in cue. The next test will see if the play, skip and play back  buttons are working meaning that the interaction with the file of the spotify API resources and the numerical value of the time for the song that are going to have the Boolean function and this will change the GUI according to the users interaction with the overlay application 
-        </p>       
+        <p>
+          We will be testing how the features of the overlay application will
+          perform including how the application will appear and its functions,
+          the first test that we are going to do will be seeing if the
+          application will access the resources that the spotify API uses and
+          this will allow us to change the environment that the file is in and
+          to extract it, to show that we will be using the asynchronous
+          programming so that we can see if the Boolean function will register
+          the file that is going to be used or not and so that the rest of the
+          features of the overlay application will use this function and the
+          input of this is the songs that are used will be accessed from within
+          the spotify API. The next test is that to check for the value of the
+          time that the song will take and this will be using the Boolean
+          function to realize the numerical value of the time when the song
+          finishes then it will play the next song that is in cue. The next test
+          will see if the play, skip and play back buttons are working meaning
+          that the interaction with the file of the spotify API resources and
+          the numerical value of the time for the song that are going to have
+          the Boolean function and this will change the GUI according to the
+          users interaction with the overlay application
+        </p>
         <h2>Timeframe</h2>
         <h2>Risks</h2>
         <p>
