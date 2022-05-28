@@ -233,6 +233,8 @@ nav a:hover {
 
 img {
   margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
