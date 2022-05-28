@@ -239,7 +239,11 @@ nav a:hover {
 
 h1 {
   color: var(--green-glow);
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 4rem;
 }
 
 a {
