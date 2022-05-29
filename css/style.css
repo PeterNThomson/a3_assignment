@@ -22,6 +22,7 @@
   --yellow-glow: hsl(54, 100%, 55%);
   --white-light: hsl(0deg, 0%, 100%);
   --white-dark: hsl(0, 0%, 31%);
+  --white-dark-light: hsl(0, 0%, 41%);
   --black: hsl(0, 0%, 0%);
 }
 
@@ -255,6 +256,24 @@ h3 {
 
 a {
   color: var(--blue-glow);
+}
+
+table, th {
+  border: var(--green-light) .2rem solid;
+  border-collapse: collapse;
+  text-align: left;
+  padding: .5rem;
+  width: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+th {
+  width: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: var(--white-dark-light);
 }
 
 @keyframes orbit {
